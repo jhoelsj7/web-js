@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Calculator</title>
+    <link rel="stylesheet" href="calculadora.css">
+</head>
+<body>
+    <div id="calculator">
+        <div id="display">
+            <div id="history"></div>
+            <input type="text" id="currentInput" disabled>
+        </div>
+        <div id="buttons">
+            <button onclick="inputDigit('(')">(</button>
+            <button onclick="inputDigit(')')">)</button>
+            <button onclick="performOperation('%')">mod</button>
+            <button onclick="clearHistory()">C</button>
+            
+            <button onclick="inputDigit('7')">7</button>
+            <button onclick="inputDigit('8')">8</button>
+            <button onclick="inputDigit('9')">9</button>
+            <button onclick="performOperation('/')">÷</button>
+            
+            <button onclick="inputDigit('4')">4</button>
+            <button onclick="inputDigit('5')">5</button>
+            <button onclick="inputDigit('6')">6</button>
+            <button onclick="performOperation('*')">×</button>
+            
+            <button onclick="inputDigit('1')">1</button>
+            <button onclick="inputDigit('2')">2</button>
+            <button onclick="inputDigit('3')">3</button>
+            <button onclick="performOperation('-')">-</button>
+            
+            <button onclick="inputDigit('0')">0</button>
+            <button onclick="inputDigit('.')">,</button>
+            <button onclick="calculate()" class="equals">=</button>
+            <button onclick="performOperation('+')">+</button>
+
+            <button onclick="inputSquare()">x²</button>
+            <button onclick="inputSquareRoot()">√</button>
+            <button onclick="inputPi()">π</button>
+            <button onclick="undo()">↶</button>
+            <button onclick="backspace()">←</button>
+        </div>
+    </div>
+    <script src="calculadora.js"></script>
+</body>
+</html>
+
+
+

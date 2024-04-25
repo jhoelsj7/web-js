@@ -1,0 +1,132 @@
+/* Estilos generales y de fondo */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Previene desbordamiento y scroll innecesario */
+}
+
+.doblefondo {
+    background-color: #f2f2f2;
+    background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiCl7nre0v3Oy2rcRg84_adJqKxpxF9SX_ztfUkaUdTgjaHZZUXN_dMtgePAOkr1skuQ03xLpNVVGfEgmKRh-hSrGxsDyVJdBRHi-8rITwXHvn-3ZQu_Lc-dfVA9fRuPIp3wWp3qlYlW9u5/s450/fondo1.png'),
+                        url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjLP5IHot1HszZ8Fpddd7mLkShfF280AcPZX9SWRQLU1Day8R721RSRlEQKiZ6M7hhKbAbmXgk_evmPsTZII0j6_KsnIXXmwi52nHyQaYyH2geE77PAfXivzmIfxeQ29Nt7LUP-p_ad6i1u/s450/fondo2.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position: left top, right bottom;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* Estilos para el texto animado */
+.rotating-text-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: transparent;
+}
+
+.rotating-text-wrapper h2 {
+    font-size: 2.5em;
+    color: #fff;
+    margin: 0;
+    padding: 0.3em;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+
+/* Animaciones específicas para cada línea de texto */
+.rotating-text-wrapper h2:nth-child(1) {
+    animation-name: rotating-text-1;
+    background-color: lightseagreen;
+}
+
+.rotating-text-wrapper h2:nth-child(2) {
+    animation-name: rotating-text-2;
+    background-color: tomato;
+}
+
+.rotating-text-wrapper h2:nth-child(3) {
+    animation-name: rotating-text-3;
+    background-color: cornflowerblue;
+}
+
+@keyframes rotating-text-1 {
+    0%, 100% { opacity: 0; transform: translateY(100%); }
+    10%, 33% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes rotating-text-2 {
+    0%, 100% { opacity: 0; transform: translateY(100%); }
+    34%, 66% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes rotating-text-3 {
+    0%, 100% { opacity: 0; transform: translateY(100%); }
+    67%, 99% { opacity: 1; transform: translateY(0); }
+}
+
+/* Estilos para el botón de inicio */
+.start-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 32px;
+    border: none;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    z-index: 1000; /* Asegura que el botón esté sobre otros elementos */
+}
+
+/* Estilos para el modal y el botón de cierre */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    overflow: auto;
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 8px;
+    position: relative; /* Importante para el posicionamiento del botón de cierre */
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 25px;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: #000; /* Efecto al pasar el ratón */
+}
+

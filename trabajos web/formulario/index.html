@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Ingreso</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <form id="loginForm" style="position: relative; padding-top: 200px; margin-left: auto; margin-right: auto; width: 300px;">
+        <label for="docType">Tipo de Documento:</label>
+        <select id="docType" name="docType">
+            <option value="DNI">D.N.I</option>
+            <option value="CE">C.E.</option>
+            <option value="CPP">C.P.P</option>
+        </select>
+
+        <label for="docNumber">Número de Documento:</label>
+        <input type="text" id="docNumber" name="docNumber" required pattern="[0-9]{8}" title="Solo se permiten 8 dígitos numéricos">
+
+        <label for="cardNumber">Número de Tarjeta (16 dígitos):</label>
+        <input type="text" id="cardNumber" name="cardNumber" required pattern="[0-9]{16}" title="Solo se permiten 16 dígitos numéricos">
+
+        <label for="password">Clave de Internet:</label>
+        <input type="password" id="password" name="password" readonly>
+        <table id="keypad" class="table_teclado"></table>
+
+        <label for="captcha">Ingrese el texto de la imagen:</label>
+        <input type="text" id="captchaInput" name="captcha" required placeholder="Ingrese CAPTCHA" maxlength="5">
+        <div id="captchaDisplay" class="captcha-style">CAPTCHA</div>
+        <button type="button" id="reloadCaptcha">Recargar CAPTCHA</button>
+
+        <button type="submit">Ingresar</button>
+    </form>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

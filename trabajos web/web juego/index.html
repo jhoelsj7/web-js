@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido Profesor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Contenido de la página con el doble fondo -->
+    <div class="doblefondo">
+        <!-- Contenido del texto animado -->
+        <div class="rotating-text-wrapper">
+            <h2>Bienvenido Profesor</h2>
+            <h2>a mi proyecto</h2>
+            <h2>¡Espero que te guste!</h2>
+        </div>
+    </div>
+    <!-- Botón con icono y modal para iniciar actividades -->
+    <button class="start-button" onclick="openModal()" aria-label="Iniciar actividades">
+        <img src="https://cdn.icon-icons.com/icons2/582/PNG/512/play-icon_59586.png" alt="Start icon" style="width: 24px; height: 24px;"> Iniciar con los trabajos
+    </button>
+    <!-- Modal para seleccionar actividad -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <h2>Seleccionar Actividad</h2>
+            <p>Elige una de las siguientes opciones:</p>
+            <button onclick="window.location.href='ahorcado.html'">Jugar al Ahorcado</button>
+            <button onclick="window.location.href='calculadora.html'">Abrir Calculadora Científica</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
